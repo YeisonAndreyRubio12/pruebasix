@@ -7,22 +7,24 @@
  */
 ?>
 <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <center><h3>PROYECTO ORI</h3></center>
+        <br/>
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
             <?= $this->Form->postLink(
-                __('Delete'),
+                __('Eliminar'),
                 ['action' => 'delete', $usuario->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $usuario->id), 'class' => 'side-nav-item']
+                ['confirm' => __('¿Estas seguro de eliminar el # {0}?', $usuario->id), 'class' => 'side-nav-item', 'class'=> 'btn btn-warning']
             ) ?>
-            <?= $this->Html->link(__('List Usuario'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Listas de usuario'), ['action' => 'index'], ['class' => 'side-nav-item', 'class'=>"btn btn-success"]) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="usuario form content">
             <?= $this->Form->create($usuario) ?>
             <fieldset>
-                <legend><?= __('Edit Usuario') ?></legend>
+                <legend><?= __('Editar Usuario') ?></legend>
                 <?php
                     echo $this->Form->control('nombre');
                     echo $this->Form->control('password');
@@ -30,8 +32,9 @@
                     echo $this->Form->control('rol_id', ['options' => $rolDeLider]);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Enviar')) ?>
             <?= $this->Form->end() ?>
         </div>
+    </div>
     </div>
 </div>

@@ -4,16 +4,20 @@
  * @var \App\Model\Entity\Usuario $usuario
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Usuario'), ['action' => 'edit', $usuario->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Usuario'), ['action' => 'delete', $usuario->id], ['confirm' => __('Are you sure you want to delete # {0}?', $usuario->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Usuario'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Usuario'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
+
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <center><h3 class="titulo"> PROYECTO ORI!</h3>
+                <br/>
+                <aside class="column"></center>
+            <div class="side-nav">
+            <?= $this->Html->link(__('Editar usuario'), ['action' => 'edit', $usuario->id], ['class' => 'side-nav-item', 'class'=>'btn btn-outline-primary']) ?>
+            <?= $this->Form->postLink(__('Eliminar usuario'), ['action' => 'delete', $usuario->id], ['confirm' => __('Are you sure you want to delete # {0}?', $usuario->id), 'class' => 'side-nav-item', 'class'=>'btn btn-outline-primary']) ?>
+            <?= $this->Html->link(__('Listas de usuarios'), ['action' => 'index'], ['class' => 'side-nav-item', 'class'=>'btn btn-outline-primary' ]) ?>
+            <?= $this->Html->link(__('Nuevo usuario'), ['action' => 'add'], ['class' => 'side-nav-item','class'=>'btn btn-outline-primary']) ?>
+            </div>
+            </aside>
     <div class="column-responsive column-80">
         <div class="usuario view content">
             <h3><?= h($usuario->id) ?></h3>
@@ -36,7 +40,7 @@
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Related Gestion De Convenio') ?></h4>
+                <h4><?= __('Relacion Gestion De Convenio') ?></h4>
                 <?php if (!empty($usuario->gestion_de_convenio)) : ?>
                 <div class="table-responsive">
                     <table>
@@ -61,5 +65,10 @@
                 <?php endif; ?>
             </div>
         </div>
+         </div>
+        </div>
+
     </div>
-</div>
+
+
+

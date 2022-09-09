@@ -97,5 +97,16 @@ endif;
 
 
     </main>
+    <hr/>
+    <div class="imagen">
+        <a href="https://www.uan.edu.co/" target="_blank" rel="noopener" >
+            <p style="text-align: center;">
+                <img  src="https://www.uan.edu.co/images/Facultades/FacultadDeEducacion/imagenes/EducacionContinuada/simposio/SIFORED/2021/UAN-Logo.png" alt="logo" width="300"
+            </p>
+        </a>
+
+    </div>
+
+
 </body>
 </html>
